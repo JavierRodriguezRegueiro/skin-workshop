@@ -1,0 +1,52 @@
+.examplesContainer {
+    border: 1px solid #dddddd;
+    width: 85%;
+    margin-top: 3%;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.example-container-body,
+.ChooseTopic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topic-selector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+
+    background:linear-gradient(black,black) bottom /* left or right or else */ no-repeat;
+    background-size:50% 3px;
+}
+
+.topic-selector--flexbox {
+    background-position-x: left;
+    transition: all 0.1s ease-out;
+}
+
+.topic-selector--grid {
+    background-position-x: right;
+    transition: all 0.1s ease-out;
+}
+
+.topic-selector__selector {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.ChooseTopic__title {
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.ChooseTopic__subtitle {
+    color: #aaaaaa;
+    font-size: 20px;
+}

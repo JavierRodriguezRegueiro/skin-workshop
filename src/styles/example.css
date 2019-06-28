@@ -1,0 +1,46 @@
+.example {
+    display: grid;
+    grid-template-areas: "title title title" "desc desc desc" "html ste cd" ". btn .";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+    width: 81%;
+    height: 400px;
+    padding: 0 2% 2% 2%;
+    margin-top: 2%;
+    border-bottom: solid 1px #dddddd;
+}
+
+.example__title {
+    grid-area: title;
+    font-size: 20px;
+    font-weight: bold;
+}
+.example__desc {
+    grid-area: desc;
+}
+
+.example__textarea {
+    resize: none;
+}
+
+.example__textarea--html {
+    grid-area: html;
+}
+.example__textarea--style {
+    grid-area: ste;
+}
+.example__code {
+    grid-area: cd;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+}
+
+.example__btn {
+    grid-area: btn;
+    margin: 15px 0px 10px 0px;
+    border-radius: 3px;
+    font-size: 15px;
+    outline: none;
+    color: white;
+    background-color: #005662;
+}
