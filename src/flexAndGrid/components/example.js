@@ -10,7 +10,7 @@ class Example extends React.Component {
 
         this.state = {
             html: this.props.html,
-            style: this.parseStyle(this.props.style)
+            style: this.props.style
         };
 
         this.setHTML = this.setHTML.bind(this);
@@ -31,12 +31,12 @@ class Example extends React.Component {
 
     setStyle(e) {
         this.setState({
-            style: this.parseStyle(e.target.value)
+            style: e.target.value
         });
     }
 
     applySrc() {
-        return 'data:text/html;charset=utf-8,' + encodeURI(this.state.html + this.state.style);
+        return 'data:text/html;charset=utf-8,' + encodeURI(this.state.html + this.parseStyle(this.state.style));
     }
 
     resetState() {
