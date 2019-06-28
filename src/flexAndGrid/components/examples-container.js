@@ -7,20 +7,23 @@ const topics = ['Flexbox', 'CSS Grid'];
 
 const flexExamples = [
     {
+        id: 'ex1-flex',
         title: 'Example 1',
         desc: 'description for example 1, follow this using flexbox.',
         html: '<div></div>',
         style: '.gg {color:red}'
     },
     {
-        title: 'Example 1',
-        desc: 'description for example 1, follow this using flexbox.',
+        id: 'ex2-flex',
+        title: 'Example 2',
+        desc: 'description for example 2, follow this using flexbox.',
         html: '<div></div>',
         style: '.gg {color:red}'
     },
     {
-        title: 'Example 1',
-        desc: 'description for example 1, follow this using flexbox.',
+        id: 'ex3-flex',
+        title: 'Example 3',
+        desc: 'description for example 3, follow this using flexbox.',
         html: '<div></div>',
         style: '.gg {color:red}'
     }
@@ -28,20 +31,23 @@ const flexExamples = [
 
 const gridExamples = [
     {
+        id: 'ex1-grid',
         title: 'Example 1',
         desc: 'description for example 1, follow this using grid.',
         html: '<div></div>',
         style: '.gg {color:red}'
     },
     {
+        id: 'ex1-grid',
         title: 'Example 1',
-        desc: 'description for example 1, follow this using grid.',
+        desc: 'description for example 2, follow this using grid.',
         html: '<div></div>',
         style: '.gg {color:red}'
     },
     {
+        id: 'ex1-grid',
         title: 'Example 1',
-        desc: 'description for example 1, follow this using grid.',
+        desc: 'description for example 3, follow this using grid.',
         html: '<div></div>',
         style: '.gg {color:red}'
     }
@@ -120,6 +126,7 @@ const ExampleContainerBody = (props) => {
         <section className='example-container-body'>
             {props.examples.map((ex) => {
                 return <Example
+                    id={ex.id}
                     title={ex.title}
                     desc={ex.desc}
                     html={ex.html}

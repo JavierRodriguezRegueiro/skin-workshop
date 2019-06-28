@@ -18,6 +18,26 @@ class Example extends React.Component {
         this.resetState = this.resetState.bind(this);
     }
 
+    componentWillMount() {
+        if(localStorage.getItem(this.props.id)) {
+
+            const exampleStatus = JSON.parse(localStorage.getItem(this.props.id));
+            this.setState(() => ({
+                html: exampleStatus.html,
+                style: exampleStatus.style
+            }))
+        }
+    }
+
+    componentDidUpdate() {
+        const exampleStatus = {
+            html: this.state.html,
+            style: this.state.style
+        }
+
+        localStorage.setItem(this.props.id, JSON.stringify(exampleStatus));
+    }
+
     parseStyle(value) {
         return '<style>' + value + '<style/>'
     }
@@ -26,13 +46,20 @@ class Example extends React.Component {
         this.setState({
             html: e.target.value.toString()
         });
-        console.log(this.state.html);
     }
 
     setStyle(e) {
         this.setState({
             style: e.target.value
         });
+    }
+
+    addTabOnHTML(e) {
+        if (e.keyCode === 9) {
+            //If tab key is pressed
+            e.preventDefault();
+            return '\n';
+        }
     }
 
     applySrc() {
@@ -55,6 +82,7 @@ class Example extends React.Component {
                     className='example__textarea example__textarea--html'
                     value={this.state.html}
                     onChange={this.setHTML}
+                    onKeyDown={this.addTabOnHTML}
                 ></textarea>
                 <textarea
                     className='example__textarea example__textarea--style'
