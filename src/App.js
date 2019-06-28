@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './components/header';
-import ExamplesContainer from './components/examples-container';
+import Header from './flexAndGrid/components/header';
+import ExamplesContainer from './flexAndGrid/components/examples-container';
 
 import './App.css';
 
