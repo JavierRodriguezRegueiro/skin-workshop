@@ -20,19 +20,28 @@
     flex-direction: row;
     justify-content: space-around;
     height: 80px;
-
     background:linear-gradient(#005662,#005662) bottom no-repeat;
-    background-size:50% 5px;
+    background-size: 100% 5px;
+}
+
+.topic-selector--selected {
+    background:linear-gradient(#005662,#005662) bottom no-repeat;
 }
 
 .topic-selector--flexbox {
+
+    background:linear-gradient(#005662,#005662) bottom no-repeat;
+    background-size:50% 5px;
     background-position-x: left;
-    transition: all 0.1s ease-out;
+    transition: all 0.1s;
 }
 
 .topic-selector--grid {
     background-position-x: right;
-    transition: all 0.1s ease-out;
+    background:linear-gradient(#005662,#005662) bottom no-repeat;
+    background-size:50% 5px;
+    background-position-x: right;
+    transition: all 0.1s;
 }
 
 .topic-selector__selector {
@@ -43,6 +52,13 @@
     border: none;
     outline: none;
     background-color: white;
+    transition: all 0.5s;
+    color: #005662;
+}
+
+.topic-selector__selector:hover {
+    background-color: #dddddd;
+    transition: all 0.5s;
 }
 
 .ChooseTopic__title {

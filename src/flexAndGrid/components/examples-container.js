@@ -141,7 +141,7 @@ const ExampleContainerBody = (props) => {
 const ChooseTopic = () => {
     return(
         <section className='ChooseTopic'>
-            <h3 className='ChooseTopic__title'>Ups!</h3>
+            <h3 className='ChooseTopic__title'>Let's start!</h3>
             <h4 className='ChooseTopic__subtitle'>Please, choose one topic to start/continue with this workshop</h4>
         </section>
     );
