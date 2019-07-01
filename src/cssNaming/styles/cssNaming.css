@@ -7,11 +7,11 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.example {
+.cssnaming__article {
     display: grid;
     grid-template-areas: "title title title title" "desc desc desc desc" "subenyo subenyo subcss subcss" "html html ste ste" ". btn btn .";
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 10fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 10fr 2fr;
     height: 600px;
     padding: 0 2% 2% 2%;
     margin-top: 2%;
@@ -19,66 +19,74 @@
     transition: all 0.1s ease-out;
 }
 
-.example__title {
+.article__title {
     grid-area: title;
     font-size: 20px;
     font-weight: bold;
 }
-.example__desc {
+.article__desc {
     grid-area: desc;
 }
 
-.example__subtitle {
+.article__subtitle {
     font-size: 12px;
     margin-top: 1%;
     margin-bottom: 1%;
     align-self: end;
 }
 
-.example__subtitle--enyo {
+.article__subtitle--enyo {
     grid-area: subenyo;
     text-align: left;
 }
 
-.example__subtitle--css {
+.article__subtitle--css {
     grid-area: subcss;
     text-align: right;
 }
 
-.example__textarea {
+.article__textarea {
     resize: none;
 }
 
-.example__textarea--idle {
+.article__textarea--idle {
     border: 1px solid black;
 }
 
-.example__textarea--wrong {
+.article__textarea--wrong {
     border: 3px solid red;
 }
 
-.example__textarea--correct {
+.article__textarea--correct {
     border: 3px solid green;
 }
 
-.example__textarea--html {
+.article__textarea--html {
     grid-area: html;
 }
-.example__textarea--style {
+.article__textarea--style {
     grid-area: ste;
 }
-.example__code {
+.article__code {
     grid-area: cd;
     width: calc(100% - 2px);
     height: calc(100% - 2px);
 }
 
-.example__btn {
+.article__btn {
     grid-area: btn;
-    margin: 15px 0px 10px 0px;
+    margin: 10px 0px 5px 0px;
     border-radius: 3px;
-    font-size: 15px;
+    font-size: 20px;
     outline: none;
     color: white;
     background-color: #005662;
+    transition: all 0.5s;
+}
+
+.article__btn:hover {
+    color: #005662;
+    background-color: white;
+    border: 2px solid #005662;
+    transition: all 0.5s;
 }

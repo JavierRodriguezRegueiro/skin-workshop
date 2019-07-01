@@ -11,6 +11,24 @@ const examples = [
     "exampleCSS": example1["example-cssnaming-css-1"].join("\n"),
     "resultEnyo": example1["result-cssnaming-enyo-1"].join("\n"),
     "resultCSS": example1["result-cssnaming-css-1"].join("\n")
+  },
+  {
+    "key": "example2",  
+    "exampleHeader": "Example 2",
+    "exampleDesc": "Set classes and define them in CSS for this Enyo component",
+    "exampleEnyo": example1["example-cssnaming-enyo-1"].join("\n"),
+    "exampleCSS": example1["example-cssnaming-css-1"].join("\n"),
+    "resultEnyo": example1["result-cssnaming-enyo-1"].join("\n"),
+    "resultCSS": example1["result-cssnaming-css-1"].join("\n")
+  },
+  {
+    "key": "example3",  
+    "exampleHeader": "Example 3",
+    "exampleDesc": "Set classes and define them in CSS for this Enyo component",
+    "exampleEnyo": example1["example-cssnaming-enyo-1"].join("\n"),
+    "exampleCSS": example1["example-cssnaming-css-1"].join("\n"),
+    "resultEnyo": example1["result-cssnaming-enyo-1"].join("\n"),
+    "resultCSS": example1["result-cssnaming-css-1"].join("\n")
   }
 ];
 
@@ -105,16 +123,16 @@ class ExampleRendering extends React.Component {
 
   // Get CSS classNames for Enyo example
   getEnyoClassesNames() {
-    var classNames = "example__textarea example__textarea--html";
+    var classNames = "article__textarea article__textarea--html";
     switch (this.state.enyoCheck) {
         case "OK":
-            classNames += " example__textarea--correct";            
+            classNames += " article__textarea--correct";            
             break;
         case "KO":
-            classNames += " example__textarea--wrong";            
+            classNames += " article__textarea--wrong";            
             break;    
         default:
-            classNames += " example__textarea--idle";
+            classNames += " article__textarea--idle";
             break;
     }
     console.log("getEnyoClassesNames returns " + classNames);
@@ -123,16 +141,16 @@ class ExampleRendering extends React.Component {
 
   // Get CSS classNames for Enyo example
   getCSSClassesNames() {
-    var classNames = "example__textarea example__textarea--style";
+    var classNames = "article__textarea article__textarea--style";
     switch (this.state.cssCheck) {
         case "OK":
-            classNames += " example__textarea--correct";            
+            classNames += " article__textarea--correct";            
             break;
         case "KO":
-            classNames += " example__textarea--wrong";            
+            classNames += " article__textarea--wrong";            
             break;
-    
         default:
+            classNames += " article__textarea--idle";
             break;
     }
     console.log("getCSSClassesNames returns " + classNames);
@@ -142,14 +160,14 @@ class ExampleRendering extends React.Component {
   // Render Component
   render() {
     return (
-      <article className="example">
-        <p className="example__title" key={this.props.example.key + "title"}>{this.props.example.exampleHeader}</p>
-        <p className="example__desc" key={this.props.example.key + "desc"}>{this.props.example.exampleDesc}</p>
-        <p className="example__subtitle example__subtitle--enyo">Enyo Component</p>
-        <p className="example__subtitle example__subtitle--css">CSS Classes</p>
+      <article className="cssnaming__article">
+        <p className="article__title" key={this.props.example.key + "title"}>{this.props.example.exampleHeader}</p>
+        <p className="article__desc" key={this.props.example.key + "desc"}>{this.props.example.exampleDesc}</p>
+        <p className="article__subtitle article__subtitle--enyo">Enyo Component</p>
+        <p className="article__subtitle article__subtitle--css">CSS Classes</p>
         <textarea className={this.getEnyoClassesNames()} key={this.props.example.key + "enyo"} onChange={this.setEnyoState} defaultValue={this.state.enyo}/>
         <textarea className={this.getCSSClassesNames()} key={this.props.example.key + "css"} onChange={this.setCSSState} defaultValue={this.state.css}/>
-        <button className="example__btn" key={this.props.example.key + "check"} onClick={this.checkAll}>Check it!</button>                
+        <button className="article__btn" key={this.props.example.key + "check"} onClick={this.checkAll}>Check it!</button>                
       </article>
     );
   }
