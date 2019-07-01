@@ -66,7 +66,7 @@ class Example extends React.Component {
     resetState() {
         this.setState({
             html: this.props.html,
-            style: this.parseStyle(this.props.style)
+            style: this.props.style
         })
     }
 
@@ -83,7 +83,7 @@ class Example extends React.Component {
                 ></textarea>
                 <textarea
                     className='example__textarea example__textarea--style'
-                    defaultValue={this.state.style}
+                    value={this.state.style}
                     onChange={this.setStyle}
                     onKeyDown={this.addTabOnHTML}
                 ></textarea>
