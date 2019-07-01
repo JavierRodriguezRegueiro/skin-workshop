@@ -22,8 +22,8 @@
     justify-content: space-around;
     height: 80px;
 
-    background:linear-gradient(black,black) bottom /* left or right or else */ no-repeat;
-    background-size:50% 3px;
+    background:linear-gradient(#005662,#005662) bottom no-repeat;
+    background-size:50% 5px;
 }
 
 .topic-selector--flexbox {

@@ -7,6 +7,9 @@
 
 # testing
 /coverage
+.idea/
+.idea/workspace
+.idea/workspace.xml
 
 # production
 /build
