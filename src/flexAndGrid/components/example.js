@@ -56,7 +56,6 @@ class Example extends React.Component {
         if (e.keyCode === 9) {
             //If tab key is pressed
             e.preventDefault();
-            return '\n';
         }
     }
 
