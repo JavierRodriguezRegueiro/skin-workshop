@@ -30,8 +30,9 @@
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: all 0.5s;
     color: #005662;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 
 .workshop__link--flex-and-grid {
@@ -47,6 +48,7 @@
     background-color: #005662;
     color:white;
     transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 
 .workshop__link--rules-and-naming:hover {
@@ -55,6 +57,7 @@
     background-color: #005662;
     color:white;
     transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 .workshop-link:hover {
     background: linear-gradient(#dddddd,#dddddd) bottom no-repeat;
