@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Redirect} from "react-router-dom";
 import MainApp from './mainApp/js/mainApp';
 import CSSNamingApp from './cssNaming/js/cssnamingApp';
+import FlexAndGrid from './flexAndGrid/components/flex-and-grid';
 
 import './App.css';
 
@@ -15,7 +16,7 @@ const applications =
   'flexAndGrid':
   {
     path: '/flexAndGridWorkshop',
-    component: MainApp
+    component: FlexAndGrid
   },
   'cssNaming':
   {

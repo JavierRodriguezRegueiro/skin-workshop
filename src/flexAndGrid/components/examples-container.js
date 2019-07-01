@@ -114,8 +114,8 @@ class TopicSelector extends React.Component {
     render() {
         return (
             <div className={this.selectorClass()}>
-                {this.props.topics.map(topic => <p className='topic-selector__selector' key={topic}
-                                                   onClick={() => this.props.setTopic(topic)}>{topic}</p>)}
+                {this.props.topics.map(topic => <button className='topic-selector__selector' key={topic}
+                                                   onClick={() => this.props.setTopic(topic)}>{topic}</button>)}
             </div>
         );
     }
