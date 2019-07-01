@@ -1,0 +1,28 @@
+.main {
+    border: 1px solid #dddddd;
+    margin-top: 3%;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.workshops {
+    display: flex;
+    flex-direction: column;
+}
+
+.workshop-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 25px;
+    color: #000000;
+    text-decoration: initial;
+    height: 80px;
+    background-size:50% 3px;
+}
+
+.workshop-link:hover {
+    background: linear-gradient(#dddddd,#dddddd) bottom no-repeat;
+}
