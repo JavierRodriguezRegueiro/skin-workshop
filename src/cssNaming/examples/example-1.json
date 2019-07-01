@@ -1,0 +1,86 @@
+{ 
+  "example1":
+  {
+    "example-cssnaming-enyo-1":
+    [
+      "enyo.kind({",
+      "  name: 'OB.OBPOSPointOfSale.UI.LineProperty',",
+      "  components: [",
+      "    {",
+      "      components: [",
+      "        {",
+      "          name: 'propertyLabel',",
+      "          style: 'width: 95px'",
+      "        },",
+      "        {",
+      "          style: 'width: 60%',",
+      "          components: [",
+      "            {",
+      "              name: 'propertyValue'",
+      "            }",
+      "          ]",
+      "        }",
+      "      ]",
+      "    }",
+      "  ]",
+      "});"
+    ],
+    "example-cssnaming-css-1":
+    [
+      "/***********************   ***********************/",
+      "/*                     File:                     */",
+      "/*        Folder: src/cssNaming/examples/        */",
+      "/***********************   ***********************/"
+    ],  
+    "result-cssnaming-enyo-1":
+    [
+      "enyo.kind({",
+      "  name: 'OB.OBPOSPointOfSale.UI.LineProperty',",
+      "  classes: 'obObposPointOfSaleUiLineProperty',",
+      "  components: [",
+      "    {",
+      "      classes: 'obObposPointOfSaleUiLineProperty-container1',",
+      "      components: [",
+      "        {",
+      "          name: 'propertyLabel',",
+      "          classes: 'obObposPointOfSaleUiLineProperty-container1-propertyLabel'",
+      "        },",
+      "        {",
+      "          classes: 'obObposPointOfSaleUiLineProperty-container1-container2',",
+      "          components: [",
+      "            {",
+      "              name: 'propertyValue',",
+      "              classes: 'obObposPointOfSaleUiLineProperty-container1-container2-propertyValue'",
+      "            }",
+      "          ]",
+      "        }",
+      "      ]",
+      "    }",
+      "  ]",
+      "});"
+    ],
+    "result-cssnaming-css-1":
+    [
+      "/***********************   ***********************/",
+      "/*               File: example1.js               */",
+      "/*        Folder: src/cssNaming/examples/        */",
+      "/***********************   ***********************/",
+      "/*",
+      "# Component: OB.OBPOSPointOfSale.UI.LineProperty",
+      "*/",
+      ".obObposPointOfSaleUiLineProperty {}",
+      "",
+      ".obObposPointOfSaleUiLineProperty-container1 {}",
+      "",
+      ".obObposPointOfSaleUiLineProperty-container1-propertyLabel {",
+      "  width: 95px;",
+      "}",
+      "",
+      ".obObposPointOfSaleUiLineProperty-container1-container2 {",
+      "  width: 60%;",
+      "}",
+      "",
+      ".obObposPointOfSaleUiLineProperty-container1-container2-propertyValue {}"
+    ]
+  }
+}

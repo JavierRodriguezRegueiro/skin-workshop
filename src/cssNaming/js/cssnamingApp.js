@@ -1,6 +1,6 @@
 import React from 'react';
 import CssNamingHeader from '../components/cssNaming-header';
-import CssNamingContainer from '../components/cssNaming-header';
+import CssNamingContainer from '../components/cssNaming-container';
 import '../styles/cssnamingapp.css';
 
 
