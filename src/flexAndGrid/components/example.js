@@ -2,8 +2,6 @@ import React from 'react';
 import '../styles/example.css';
 
 
-let test = '<html><body><p>llll</p></body></html>'
-
 class Example extends React.Component {
     constructor(props) {
         super(props);
@@ -19,7 +17,7 @@ class Example extends React.Component {
     }
 
     componentWillMount() {
-        if(localStorage.getItem(this.props.id)) {
+        if (localStorage.getItem(this.props.id)) {
 
             const exampleStatus = JSON.parse(localStorage.getItem(this.props.id));
             this.setState(() => ({
@@ -98,7 +96,8 @@ class Example extends React.Component {
                 ></iframe>
                 <button
                     className='example__btn'
-                onClick={this.resetState}>Reset</button>
+                    onClick={this.resetState}>Reset
+                </button>
             </section>
         );
     }
