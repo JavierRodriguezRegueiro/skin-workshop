@@ -1,28 +1,61 @@
 .main {
-    border: 1px solid #dddddd;
     margin-top: 3%;
     border-radius: 3px;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .workshops {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    height: 500px;
+    justify-content: space-evenly;
 }
 
-.workshop-link {
+.workshop__link {
     display: flex;
+    padding-bottom: 20px;
+    margin-top: 3%;
     flex-direction: row;
-    align-items: center;
-    font-size: 25px;
+    align-items: flex-end;
+    font-size: 35px;
     color: #000000;
     text-decoration: initial;
-    height: 80px;
-    background-size:50% 3px;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    border-radius: 10px;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+    outline: none;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.5s;
+    color: #005662;
 }
 
+.workshop__link--flex-and-grid {
+    background-image: url("../img/flexandgrid.svg");
+}
+
+.workshop__link--rules-and-naming {
+    background-image: url("../img/rulesandnaming.svg");
+}
+.workshop__link--flex-and-grid:hover {
+    transform: scale(1.1);
+    background-image: url("../img/flexandgrid-white.svg");
+    background-color: #005662;
+    color:white;
+    transition: all 0.5s;
+}
+
+.workshop__link--rules-and-naming:hover {
+    transform: scale(1.1);
+    background-image: url("../img/rulesandnaming-white.svg");
+    background-color: #005662;
+    color:white;
+    transition: all 0.5s;
+}
 .workshop-link:hover {
     background: linear-gradient(#dddddd,#dddddd) bottom no-repeat;
 }

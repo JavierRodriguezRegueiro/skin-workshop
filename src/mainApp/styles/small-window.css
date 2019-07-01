@@ -1,0 +1,11 @@
+.small-window {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    margin: 2% 5% 0% 5%;
+}
+
+.small-window__subtitle {
+    color: #aaaaaa;
+}

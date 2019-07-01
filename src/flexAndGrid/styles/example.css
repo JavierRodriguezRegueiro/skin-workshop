@@ -24,6 +24,11 @@
     resize: none;
 }
 
+.example__textarea:focus {
+    border: 1px solid #005662;
+    outline: none;
+}
+
 .example__textarea--html {
     grid-area: html;
 }
@@ -38,11 +43,18 @@
 
 .example__btn {
     grid-area: btn;
-    margin: 15px 0px 10px 0px;
+    margin: 10px 0px 5px 0px;
     border-radius: 3px;
-    font-size: 15px;
+    font-size: 20px;
     outline: none;
     color: white;
     background-color: #005662;
+    transition: all 0.5s;
 }
 
+.example__btn:hover {
+    color: #005662;
+    background-color: white;
+    border: 2px solid #005662;
+    transition: all 0.5s;
+}

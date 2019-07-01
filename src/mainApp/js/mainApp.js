@@ -6,11 +6,13 @@ import '../styles/mainapp.css';
 const workshops = {
   'flexAndGrid': {
       title: 'Flexbox & CSS Grid Workshop',
-      path: '/flexAndGridWorkshop'
+      path: '/flexAndGridWorkshop',
+      classLinkName: 'workshop__link--flex-and-grid'
   },
   'cssNaming': {
       title: 'CSS Class Naming Workshop',
-      path: '/cssNamingWorkshop'
+      path: '/cssNamingWorkshop',
+      classLinkName: 'workshop__link--rules-and-naming'
   }
 };
 

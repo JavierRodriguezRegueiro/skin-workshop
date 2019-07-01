@@ -114,8 +114,8 @@ class TopicSelector extends React.Component {
     render() {
         return (
             <div className={this.selectorClass()}>
-                {this.props.topics.map(topic => <p className='topic-selector__selector' key={topic}
-                                                   onClick={() => this.props.setTopic(topic)}>{topic}</p>)}
+                {this.props.topics.map(topic => <button className='topic-selector__selector' key={topic}
+                                                   onClick={() => this.props.setTopic(topic)}>{topic}</button>)}
             </div>
         );
     }
@@ -141,7 +141,7 @@ const ExampleContainerBody = (props) => {
 const ChooseTopic = () => {
     return(
         <section className='ChooseTopic'>
-            <h3 className='ChooseTopic__title'>Ups!</h3>
+            <h3 className='ChooseTopic__title'>Let's start!</h3>
             <h4 className='ChooseTopic__subtitle'>Please, choose one topic to start/continue with this workshop</h4>
         </section>
     );
