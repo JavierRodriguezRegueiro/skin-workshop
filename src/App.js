@@ -43,7 +43,6 @@ class RouterApp extends React.Component {
         this.setState({
             windowWidth: window.innerWidth
         });
-        console.log(window.innerWidth);
     }
 
     componentDidMount() {
