@@ -88,6 +88,7 @@ class Example extends React.Component {
                     className='example__textarea example__textarea--style'
                     defaultValue={this.state.style}
                     onChange={this.setStyle}
+                    onKeyDown={this.addTabOnHTML}
                 ></textarea>
                 <iframe title={this.props.title}
                         className='example__code'
