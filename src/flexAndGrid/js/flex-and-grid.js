@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './header';
-import ExamplesContainer from './examples-container';
+import Header from '../components/header';
+import ExamplesContainer from '../components/examples-container';
 import '../styles/flex-and-grid.css';
 
 const FlexAndGrid = () => {

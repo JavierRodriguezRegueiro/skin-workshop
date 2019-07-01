@@ -1,8 +1,8 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Redirect} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import MainApp from './mainApp/js/mainApp';
 import CSSNamingApp from './cssNaming/js/cssnamingApp';
-import FlexAndGrid from './flexAndGrid/components/flex-and-grid';
+import FlexAndGrid from './flexAndGrid/js/flex-and-grid';
 import SmallWindow from './mainApp/components/small-window';
 
 import './App.css';
