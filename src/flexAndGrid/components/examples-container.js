@@ -38,14 +38,14 @@ const gridExamples = [
         style: '.gg {color:red}'
     },
     {
-        id: 'ex1-grid',
+        id: 'ex2-grid',
         title: 'Example 1',
         desc: 'description for example 2, follow this using grid.',
         html: '<div></div>',
         style: '.gg {color:red}'
     },
     {
-        id: 'ex1-grid',
+        id: 'ex3-grid',
         title: 'Example 1',
         desc: 'description for example 3, follow this using grid.',
         html: '<div></div>',
@@ -126,6 +126,7 @@ const ExampleContainerBody = (props) => {
         <section className='example-container-body'>
             {props.examples.map((ex) => {
                 return <Example
+                    key={ex.id}
                     id={ex.id}
                     title={ex.title}
                     desc={ex.desc}
