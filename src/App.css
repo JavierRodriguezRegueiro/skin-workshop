@@ -1,3 +1,7 @@
+.router-container {
+    height: 100%;
+}
+
 .app {
     display: flex;
     flex-direction: column;

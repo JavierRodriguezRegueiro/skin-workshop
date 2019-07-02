@@ -65,8 +65,8 @@ class RouterApp extends React.Component {
 
     render() {
         return (
-            <div>
-            {this.renderRouter()}
+            <div className='router-container'>
+                {this.renderRouter()}
             </div>
         );
     }
