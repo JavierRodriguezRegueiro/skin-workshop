@@ -7,62 +7,27 @@ import { example4 } from '../examples/example-4.json';
 import { example5 } from '../examples/example-5.json';
 import { example6 } from '../examples/example-6.json';
 
-const examples = [
-  {
-    "key": example1["key"],  
-    "exampleHeader": example1["header"],
-    "exampleDesc": example1["description"],
-    "exampleEnyo": example1["example-cssnaming-enyo"].join("\n"),
-    "exampleCSS": example1["example-cssnaming-css"].join("\n"),
-    "resultEnyo": example1["result-cssnaming-enyo"].join("\n"),
-    "resultCSS": example1["result-cssnaming-css"].join("\n")
-  },
-  {
-    "key": example2["key"],  
-    "exampleHeader": example2["header"],
-    "exampleDesc": example2["description"],
-    "exampleEnyo": example2["example-cssnaming-enyo"].join("\n"),
-    "exampleCSS": example2["example-cssnaming-css"].join("\n"),
-    "resultEnyo": example2["result-cssnaming-enyo"].join("\n"),
-    "resultCSS": example2["result-cssnaming-css"].join("\n")
-  },
-  {
-    "key": example3["key"],  
-    "exampleHeader": example3["header"],
-    "exampleDesc": example3["description"],
-    "exampleEnyo": example3["example-cssnaming-enyo"].join("\n"),
-    "exampleCSS": example3["example-cssnaming-css"].join("\n"),
-    "resultEnyo": example3["result-cssnaming-enyo"].join("\n"),
-    "resultCSS": example3["result-cssnaming-css"].join("\n")
-  },
-  {
-    "key": example4["key"],  
-    "exampleHeader": example4["header"],
-    "exampleDesc": example4["description"],
-    "exampleEnyo": example4["example-cssnaming-enyo"].join("\n"),
-    "exampleCSS": example4["example-cssnaming-css"].join("\n"),
-    "resultEnyo": example4["result-cssnaming-enyo"].join("\n"),
-    "resultCSS": example4["result-cssnaming-css"].join("\n")
-  },
-  {
-    "key": example5["key"],  
-    "exampleHeader": example5["header"],
-    "exampleDesc": example5["description"],
-    "exampleEnyo": example5["example-cssnaming-enyo"].join("\n"),
-    "exampleCSS": example5["example-cssnaming-css"].join("\n"),
-    "resultEnyo": example5["result-cssnaming-enyo"].join("\n"),
-    "resultCSS": example5["result-cssnaming-css"].join("\n")
-  },
-  {
-    "key": example6["key"],  
-    "exampleHeader": example6["header"],
-    "exampleDesc": example6["description"],
-    "exampleEnyo": example6["example-cssnaming-enyo"].join("\n"),
-    "exampleCSS": example6["example-cssnaming-css"].join("\n"),
-    "resultEnyo": example6["result-cssnaming-enyo"].join("\n"),
-    "resultCSS": example6["result-cssnaming-css"].join("\n")
+// Array of example of the workshop
+const examplesList = [example1, example2, example3, example4, example5, example6];
+
+// Generates structure needed for the workshop
+const examples = () => {
+  var exampleArray = [];
+  for (let i = 0; i < examplesList.length; i++) {
+    let exampleElement = examplesList[i];
+    let example = {
+      "key": exampleElement["key"],  
+      "exampleHeader": exampleElement["header"],
+      "exampleDesc": exampleElement["description"],
+      "exampleEnyo": exampleElement["example-cssnaming-enyo"].join("\n"),
+      "exampleCSS": exampleElement["example-cssnaming-css"].join("\n"),
+      "resultEnyo": exampleElement["result-cssnaming-enyo"].join("\n"),
+      "resultCSS": exampleElement["result-cssnaming-css"].join("\n")
+    }
+    exampleArray.push(example);
   }
-];
+  return exampleArray;
+};
 
 class ExampleRendering extends React.Component {
   constructor(props) {
@@ -256,13 +221,13 @@ class ExampleRendering extends React.Component {
         <button className="article__btnresult" key={this.props.example.key + "result"} onClick={this.showResult}>{this.changeShowResultLabel()}</button>
         <button className="article__btnreset" key={this.props.example.key + "reset"} onClick={this.resetExample}>Reset Example</button>
         <div className={this.getResultClassesNames()}>
-            <textarea className="article__flexElement article__textarea article__textarea--idle" readOnly key={this.props.example.key + "enyoResult"} value={this.props.example.resultEnyo}/>
-            <textarea className="article__flexElement article__textarea article__textarea--idle" readOnly key={this.props.example.key + "cssResult"} value={this.props.example.resultCSS}/>
+            <textarea className="article__flexElement article__textarea article__textarea--idle" readOnly spellCheck="false" key={this.props.example.key + "enyoResult"} value={this.props.example.resultEnyo}/>
+            <textarea className="article__flexElement article__textarea article__textarea--idle" readOnly spellCheck="false" key={this.props.example.key + "cssResult"} value={this.props.example.resultCSS}/>
         </div> 
         <p className="article__subtitle article__subtitle--enyo">Enyo Component</p>
         <p className="article__subtitle article__subtitle--css">CSS Classes</p>
-        <textarea className={this.getEnyoClassesNames()} key={this.props.example.key + "enyo"} onChange={this.setEnyoState} value={this.state.enyo}/>
-        <textarea className={this.getCSSClassesNames()} key={this.props.example.key + "css"} onChange={this.setCSSState} value={this.state.css}/>
+        <textarea className={this.getEnyoClassesNames()} spellCheck="false" key={this.props.example.key + "enyo"} onChange={this.setEnyoState} value={this.state.enyo}/>
+        <textarea className={this.getCSSClassesNames()} spellCheck="false" key={this.props.example.key + "css"} onChange={this.setCSSState} value={this.state.css}/>
         <button className="article__btn" key={this.props.example.key + "check"} onClick={this.checkAll}>Check it!</button>            
       </article>
     );
@@ -273,7 +238,7 @@ class CssNaming extends React.Component {
   render() {
     return (
       <div className="cssnaming">
-        {examples.map(example => <ExampleRendering key={example.key} example={example}/>)}
+        {examples().map(example => <ExampleRendering key={example.key} example={example}/>)}
       </div>
     );
   }
