@@ -73,6 +73,7 @@
       "/*                File: example1.js              */",
       "/*        Folder: src/cssNaming/examples/        */",
       "/***********************   ***********************/",
+      "/*",
       "# Component: OB.UI.ListInvoicesLine",
       "# Inherits: [OB.UI.CheckboxButton]",
       "*/",
