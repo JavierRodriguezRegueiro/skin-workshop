@@ -1,0 +1,49 @@
+{
+  "example4": {
+    "id": "ex4-flex",
+    "title": "Example 4",
+    "desc": "In this example, you need to put all this items center. let's see how justify-content works. Center all the elements in a column and in a row.",
+    "html": [
+      "<div class='flex-container1'>",
+      "   <div class='item'>1</div>",
+      "   <div class='item item--bigger'>2</div>",
+      "   <div class='item'>3</div>",
+      "</div>",
+      "<div class='flex-container2'>",
+      "   <div class='item item--green'>1</div>",
+      "   <div class='item item--green'>2</div>",
+      "   <div class='item item--green'>3</div>",
+      "</div>"
+    ],
+    "style": [
+      ".flex-container1 {",
+      "   display: flex;",
+      "   flex-direction: row;",
+      "   width: 100%;",
+      "   margin-bottom: 5px;",
+      "   border: 1px solid black;",
+      "   /* Code here */",
+      "   ",
+      "}",
+      ".flex-container2 {",
+      "   display: flex;",
+      "   flex-direction: column;",
+      "   height: 70%;",
+      "   width: 30%;",
+      "   border: 1px solid black;",
+      "   /* Also here */",
+      "   ",
+      "}",
+      ".item {",
+      "   width: 40px;",
+      "   height: 40px;",
+      "   background-color: red;",
+      "   text-align: center;",
+      "   margin: 10px;",
+      "}",
+      ".item--green {",
+      "   background-color: green;",
+      "}"
+    ]
+  }
+}

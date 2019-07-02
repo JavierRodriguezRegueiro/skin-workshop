@@ -1,0 +1,40 @@
+{
+  "example1": {
+    "id": "ex1-grid",
+    "title": "Example 1",
+    "desc": "Let's start using CSS grid. For your very first time, you have to create a simple grid with 2 rows and 2 column and 1fr us unit per column/row. You have to use grid-template-rows and grid-template-columns. After that, set a gap between items using grid-column-gap and grid-row-gap, 5px both of them",
+    "html": [
+      "<div class='grid-container'>",
+      "   <div class='item red'>1</div>",
+      "   <div class='item yellow'>2</div>",
+      "   <div class='item green'>3</div>",
+      "   <div class='item blue'>4</div>",
+      "</div>"
+    ],
+    "style": [
+      ".grid-container {",
+      "   height: 100%;",
+      "   width: 100%;",
+      "   /* Code over here please*/",
+      "   ",
+      "}",
+      ".item {",
+      "   width: 100%;",
+      "   height: 100%;",
+      "   text-align: center;",
+      "}",
+      ".red {",
+      "   background-color: red;",
+      "}",
+      ".yellow {",
+      "   background-color: yellow;",
+      "}",
+      ".green {",
+      "   background-color: green;",
+      "}",
+      ".blue {",
+      "   background-color: blue;",
+      "}"
+    ]
+  }
+}

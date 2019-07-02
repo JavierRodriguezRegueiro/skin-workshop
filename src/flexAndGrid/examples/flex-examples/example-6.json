@@ -1,0 +1,38 @@
+{
+  "example6": {
+    "id": "ex1-extra",
+    "title": "Example EXTRA",
+    "desc": "Keep calm, this is a easy one. Just define a custom property to create a main color, i do not really care which one and use it to define the background color to all the items. There is not explanation for this so, if you do not know how to do it, just search it on google.  ",
+    "html": [
+      "<div>",
+      "   <div class='item item1'>1</div>",
+      "   <div class='item item2'>2</div>",
+      "   <div class='item item3'>3</div>",
+      "</div>"
+    ],
+    "style": [
+      ":root {",
+      "   /*Add it over here*/",
+      "   ",
+      "}",
+      ".item {",
+      "   width: 40px;",
+      "   height: 40px;",
+      "   text-align: center;",
+      "   margin: 10px;",
+      "}",
+      ".item1 {",
+      "   /* Code please */",
+      "   ",
+      "}",
+      ".item2 {",
+      "   /* Code please */",
+      "   ",
+      "}",
+      ".item3 {",
+      "   /* Code please */",
+      "   ",
+      "}"
+    ]
+  }
+}

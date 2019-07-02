@@ -1,0 +1,27 @@
+{
+  "example2": {
+    "id": "ex2-flex",
+    "title": "Example 2",
+    "desc": "Having the same example, try to put all these elements in a column. Use flex-direction attribute",
+    "html": [
+      "<div class='flex-container'>",
+      "   <div class='item'>1</div>",
+      "   <div class='item'>2</div>",
+      "   <div class='item'>3</div>",
+      "</div>"
+    ],
+    "style": [
+      ".flex-container {",
+      "   /*Two attributes over here again please!*/",
+      "   ",
+      "}",
+      ".item {",
+      "   width: 40px;",
+      "   height: 40px;",
+      "   background-color: red;",
+      "   text-align: center;",
+      "   margin: 10px;",
+      "}"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "example2": {
+    "id": "ex2-grid",
+    "title": "Example 2",
+    "desc": "Lets repeat the example 1 but in this case, the red div must be in the top-right area, the yellow one must be in the bottom-right are, the blue div in the top-left and the last one in bottom-left. To set all of this, you must use the previous attributes examples, grid-template-area to define areas and grid-area to specify which should be used.",
+    "html": [
+      "<div class='grid-container'>",
+      "   <div class='item red'>1</div>",
+      "   <div class='item yellow'>2</div>",
+      "   <div class='item green'>3</div>",
+      "   <div class='item blue'>4</div>",
+      "</div>"
+    ],
+    "style": [
+      ".grid-container {",
+      "   height: 100%;",
+      "   width: 100%;",
+      "   /* Code over here please*/",
+      "   ",
+      "}",
+      ".item {",
+      "   width: 100%;",
+      "   height: 100%;",
+      "   text-align: center;",
+      "}",
+      ".red {",
+      "   background-color: red;",
+      "   /* Here some code */",
+      "   ",
+      "}",
+      ".yellow {",
+      "   background-color: yellow;",
+      "   /* Here some code */",
+      "   ",
+      "}",
+      ".green {",
+      "   background-color: green;",
+      "   /* Here some code */",
+      "   ",
+      "}",
+      ".blue {",
+      "   background-color: blue;",
+      "   /* Here some code */",
+      "   ",
+      "}"
+    ]
+  }
+}
