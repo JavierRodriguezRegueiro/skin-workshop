@@ -6,7 +6,7 @@ const examples = [
   {
     "key": "example1",  
     "exampleHeader": "Example 1",
-    "exampleDesc": "Set classes and define them in CSS for this Enyo component",
+    "exampleDesc": "Set classes and define them in CSS for this Enyo component inside example1.js file",
     "exampleEnyo": example1["example-cssnaming-enyo-1"].join("\n"),
     "exampleCSS": example1["example-cssnaming-css-1"].join("\n"),
     "resultEnyo": example1["result-cssnaming-enyo-1"].join("\n"),
@@ -39,16 +39,19 @@ class ExampleRendering extends React.Component {
       enyo: this.props.example.exampleEnyo,
       css: this.props.example.exampleCSS,
       enyoCheck: "IDLE",
-      cssCheck: "IDLE"
+      cssCheck: "IDLE",
+      showResult: false,
     }
 
     this.setEnyoState = this.setEnyoState.bind(this);
     this.setCSSState = this.setCSSState.bind(this);
     this.setEnyoCheckState = this.setEnyoCheckState.bind(this);
     this.setCssCheckState = this.setCssCheckState.bind(this);
+    this.setShowResult = this.setShowResult.bind(this);
     this.checkAll = this.checkAll.bind(this);
     this.checkEnyo = this.checkEnyo.bind(this);
     this.checkCSS = this.checkCSS.bind(this);
+    this.showResult = this.showResult.bind(this);
   };
 
   // Internal Reactjs function --> Get example state from sessionStorage
@@ -59,7 +62,8 @@ class ExampleRendering extends React.Component {
         enyo: exampleStatus.enyo,
         css: exampleStatus.css,
         enyoCheck: exampleStatus.enyoCheck,
-        cssCheck: exampleStatus.cssCheck
+        cssCheck: exampleStatus.cssCheck,
+        showResult: exampleStatus.showResult
       }));
     }
   };
@@ -70,7 +74,8 @@ class ExampleRendering extends React.Component {
       enyo: this.state.enyo,
       css: this.state.css,
       enyoCheck: this.state.enyoCheck,
-      cssCheck: this.state.cssCheck
+      cssCheck: this.state.cssCheck,
+      showResult: this.state.showResult
     }
     sessionStorage.setItem(this.props.example.key, JSON.stringify(exampleStatus));
   };
@@ -105,6 +110,13 @@ class ExampleRendering extends React.Component {
     });  
   };
 
+  // Set Show Result state for example
+  setShowResult(newValue) {
+    this.setState({
+      showResult: newValue
+    });
+  };
+
   // Check function for Enyo
   checkEnyo(resultEnyo) {
    return this.state.enyo === resultEnyo;
@@ -121,6 +133,17 @@ class ExampleRendering extends React.Component {
     this.checkCSS(this.props.example.resultCSS) ? this.setCssCheckState("OK") : this.setCssCheckState("KO");
   };
 
+  // Get CSS classNames for Article example
+  getArticleClassesNames() {
+    var classNames = "cssnaming__article";
+    if (this.state.showResult) {
+      classNames += " cssnaming__article--withResult";
+    } else {
+      classNames += " cssnaming__article--withoutResult";
+    }
+    return classNames;
+  };
+
   // Get CSS classNames for Enyo example
   getEnyoClassesNames() {
     var classNames = "article__textarea article__textarea--html";
@@ -135,7 +158,6 @@ class ExampleRendering extends React.Component {
             classNames += " article__textarea--idle";
             break;
     }
-    console.log("getEnyoClassesNames returns " + classNames);
     return classNames;
   };
 
@@ -157,17 +179,48 @@ class ExampleRendering extends React.Component {
     return classNames;
   };
 
+  // Get name for Show Result button example
+  changeShowResultLabel() {
+      var msg = '';
+      if (this.state.showResult) {
+          msg = 'Hide Solution';
+      } else {
+          msg = 'Show Solution'
+      }
+      return msg;
+  }
+
+  // Chnage showResult state
+  showResult() {
+      let currentSate = this.state.showResult;
+      this.setShowResult(!currentSate);
+  };
+
+  // Get CSS classNames for Result example
+  getResultClassesNames() {
+    var classNames = "article__resultContainer";
+    if (!this.state.showResult) {
+        classNames += " article__resultContainer--hidden";
+    }
+    return classNames;
+  };
+
   // Render Component
   render() {
     return (
-      <article className="cssnaming__article">
+      <article className={this.getArticleClassesNames()}>
         <p className="article__title" key={this.props.example.key + "title"}>{this.props.example.exampleHeader}</p>
         <p className="article__desc" key={this.props.example.key + "desc"}>{this.props.example.exampleDesc}</p>
+        <button className="article__btnresult" key={this.props.example.key + "result"} onClick={this.showResult}>{this.changeShowResultLabel()}</button>
+        <div className={this.getResultClassesNames()}>
+            <textarea className="article__flexElement" readOnly key={this.props.example.key + "enyoResult"} value={this.props.example.resultEnyo}/>
+            <textarea className="article__flexElement" readOnly key={this.props.example.key + "cssResult"} value={this.props.example.resultCSS}/>
+        </div> 
         <p className="article__subtitle article__subtitle--enyo">Enyo Component</p>
         <p className="article__subtitle article__subtitle--css">CSS Classes</p>
         <textarea className={this.getEnyoClassesNames()} key={this.props.example.key + "enyo"} onChange={this.setEnyoState} defaultValue={this.state.enyo}/>
         <textarea className={this.getCSSClassesNames()} key={this.props.example.key + "css"} onChange={this.setCSSState} defaultValue={this.state.css}/>
-        <button className="article__btn" key={this.props.example.key + "check"} onClick={this.checkAll}>Check it!</button>                
+        <button className="article__btn" key={this.props.example.key + "check"} onClick={this.checkAll}>Check it!</button>            
       </article>
     );
   }
