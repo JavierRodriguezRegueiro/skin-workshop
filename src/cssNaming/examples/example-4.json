@@ -1,0 +1,90 @@
+{ 
+  "example4":
+  {
+    "key": "example4",
+    "header": "Example 4",
+    "description": "Change styles by classes and define them in CSS file for this Enyo component inside example4.js file. Try to use CSS naming simplification whre it is possible",
+    "example-cssnaming-enyo":
+    [
+      "enyo.kind({",
+      "  name: 'OB.OBPOSPointOfSale.UI.Property',",
+      "  components: [",
+      "    {",
+      "      name: 'propertyContainer',",
+      "      components: [",
+      "        {",
+      "          name: 'propertyRecord',",
+      "          style: 'width: 60%',",
+      "          components: [",
+      "            {",
+      "              name: 'propertyValue'",
+      "            },",
+      "            {",
+      "              name: 'propertyLabel'",
+      "            }",
+      "          ]",
+      "        }",
+      "      ]",
+      "    }",
+      "  ]",
+      "});"
+    ],
+    "example-cssnaming-css":
+    [
+      "/***********************   ***********************/",
+      "/*                     File:                     */",
+      "/*        Folder: src/cssNaming/examples/        */",
+      "/***********************   ***********************/"
+    ],  
+    "result-cssnaming-enyo":
+    [
+      "enyo.kind({",
+      "  name: 'OB.OBPOSPointOfSale.UI.Property',",
+      "  classes: 'obObposPointOfSaleUiProperty',",
+      "  components: [",
+      "    {",
+      "      name: 'propertyContainer',",
+      "      classes: 'obObposPointOfSaleUiProperty-propertyContainer',",
+      "      components: [",
+      "        {",
+      "          name: 'propertyRecord',",
+      "          classes: 'obObposPointOfSaleUiProperty-propertyContainer-propertyRecord',",
+      "          components: [",
+      "            {",
+      "              name: 'propertyValue',",
+      "              classes: 'obObposPointOfSaleUiProperty-propertyRecord-propertyValue'",
+      "            },",
+      "            {",
+      "              name: 'propertyLabel',",
+      "              classes: 'obObposPointOfSaleUiProperty-propertyRecord-propertyLabel'",
+      "            }",
+      "          ]",
+      "        }",
+      "      ]",
+      "    }",
+      "  ]",
+      "});"
+    ],
+    "result-cssnaming-css":
+    [
+      "/***********************   ***********************/",
+      "/*               File: example4.js               */",
+      "/*        Folder: src/cssNaming/examples/        */",
+      "/***********************   ***********************/",
+      "/*",
+      "# Component: OB.OBPOSPointOfSale.UI.Property",
+      "*/",
+      ".obObposPointOfSaleUiProperty {}",
+      "",
+      ".obObposPointOfSaleUiProperty-propertyContainer {}",
+      "",
+      ".obObposPointOfSaleUiProperty-propertyContainer-propertyRecord {",
+      "  width: 60%;",
+      "}",
+      "",
+      ".obObposPointOfSaleUiProperty-propertyRecord-propertyValue {}",
+      "",
+      ".obObposPointOfSaleUiProperty-propertyRecord-propertyLabel {}"
+    ]
+  }
+}
