@@ -36,7 +36,7 @@ class Example extends React.Component {
         localStorage.setItem(this.props.id, JSON.stringify(exampleStatus));
     }
 
-    parseStyle(value) {
+    static parseStyle(value) {
         return '<style>' + value + '<style/>'
     }
 
@@ -60,7 +60,7 @@ class Example extends React.Component {
     }
 
     applySrc() {
-        return 'data:text/html;charset=utf-8,' + encodeURI(this.state.html + this.parseStyle(this.state.style));
+        return 'data:text/html;charset=utf-8,' + encodeURI(this.state.html + Example.parseStyle(this.state.style));
     }
 
     resetState() {
