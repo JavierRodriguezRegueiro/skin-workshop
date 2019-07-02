@@ -9,14 +9,23 @@
 
 .cssnaming__article {
     display: grid;
-    grid-template-areas: "title title title title" "desc desc desc desc" "subenyo subenyo subcss subcss" "html html ste ste" ". btn btn .";
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 10fr 2fr;
-    height: 600px;
+    height: 800px;
     padding: 0 2% 2% 2%;
     margin-top: 2%;
     border-bottom: solid 1px #dddddd;
     transition: all 0.1s ease-out;
+}
+
+.cssnaming__article--withResult {    
+    grid-template-areas: "title title title title" "desc desc desc desc" "btnresult . . ." "resultContainer resultContainer resultContainer resultContainer" "subenyo subenyo subcss subcss" "html html ste ste" ". btn btn .";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 10fr 1fr 10fr 2fr;   
+}
+
+.cssnaming__article--withoutResult {
+    grid-template-areas: "title title title title" "desc desc desc desc" "btnresult . . ." "subenyo subenyo subcss subcss" "html html ste ste" ". btn btn .";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 10fr 2fr;    
 }
 
 .article__title {
@@ -47,6 +56,20 @@
 
 .article__textarea {
     resize: none;
+}
+
+.article__resultContainer {
+    grid-area: resultContainer;
+    display: flex;
+    flex-direction: row;
+}
+
+.article__flexElement {
+    flex: 1;
+}
+
+.article__resultContainer--hidden {
+    display: none;
 }
 
 .article__textarea--idle {
@@ -88,5 +111,22 @@
     color: #005662;
     background-color: white;
     border: 2px solid #005662;
+    transition: all 0.5s;
+}
+
+.article__btnresult {
+    grid-area: btnresult;
+    margin: 10px 0px 5px 0px;
+    border-radius: 3px;
+    font-size: 20px;
+    outline: none;
+    color: white;
+    transition: all 0.5s;  
+}
+
+.article__btnresult:hover {
+    color: #000000;
+    background-color: white;
+    border: 2px solid #dddddd;
     transition: all 0.5s;
 }
