@@ -1,0 +1,14 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footer__users {
+    margin-left: 10px;
+}
+
+.footer__users__user {
+    margin: 0;
+}
