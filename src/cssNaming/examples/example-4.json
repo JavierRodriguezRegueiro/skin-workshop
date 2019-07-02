@@ -3,7 +3,7 @@
   {
     "key": "example4",
     "header": "Example 4",
-    "description": "Change styles by classes and define them in CSS file for this Enyo component inside example4.js file. Try to use CSS naming simplification whre it is possible",
+    "description": "Change styles by classes and define them in CSS file for this Enyo component inside example4.js file. Try to use CSS naming simplification wherever it is possible",
     "example-cssnaming-enyo":
     [
       "enyo.kind({",
