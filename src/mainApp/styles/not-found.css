@@ -1,0 +1,10 @@
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #005662;
+    color: white;
+    height: 50%;
+
+}

@@ -1,9 +1,10 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import MainApp from './mainApp/js/mainApp';
 import CSSNamingApp from './cssNaming/js/cssnamingApp';
 import FlexAndGrid from './flexAndGrid/js/flex-and-grid';
 import SmallWindow from './mainApp/components/small-window';
+import NotFound from './mainApp/components/not-found';
 
 import './App.css';
 
@@ -48,17 +49,20 @@ class RouterApp extends React.Component {
     componentDidMount() {
         window.addEventListener("resize", this.setWindowWidth);
     }
+
     renderRouter() {
-        if(this.state.windowWidth >= 800) {
+        if (this.state.windowWidth >= 800) {
             //This application is not meant to be used in mobile devices
             return (
                 <Router>
-                    {Object.keys(applications).map(key => <Route key={key} exact path={applications[key].path}
-                                                                 component={applications[key].component}/>)}
+                    <Switch>
+                        {Object.keys(applications).map(key => <Route key={key} exact path={applications[key].path}
+                                                                     component={applications[key].component}/>)}
+                        <Route component={NotFound}/>
+                    </Switch>
                 </Router>
             );
-        }
-        else {
+        } else {
             return <SmallWindow/>
         }
     }
