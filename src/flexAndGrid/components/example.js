@@ -42,7 +42,7 @@ class Example extends React.Component {
 
     setHTML(e) {
         this.setState({
-            html: e.target.value.toString()
+            html: e.target.value
         });
     }
 
@@ -52,10 +52,14 @@ class Example extends React.Component {
         });
     }
 
-    addTabOnHTML(e) {
+    addTabOnTextArea(e) {
         if (e.keyCode === 9) {
             //If tab key is pressed
+            let savePosition = e.target.selectionStart + 3;
             e.preventDefault();
+            e.target.value = e.target.value.substring(0, e.target.selectionStart) + '   ' + e.target.value.substring(e.target.selectionStart, e.target.value.length);
+            e.target.selectionStart = savePosition;
+            e.target.selectionEnd = savePosition;
         }
     }
 
@@ -79,20 +83,20 @@ class Example extends React.Component {
                     className='example__textarea example__textarea--html'
                     value={this.state.html}
                     onChange={this.setHTML}
-                    onKeyDown={this.addTabOnHTML}
-                ></textarea>
+                    onKeyDown={this.addTabOnTextArea}
+                />
                 <textarea
                     className='example__textarea example__textarea--style'
                     value={this.state.style}
                     onChange={this.setStyle}
-                    onKeyDown={this.addTabOnHTML}
-                ></textarea>
+                    onKeyDown={this.addTabOnTextArea}
+                />
                 <iframe title={this.props.title}
-                        className='example__code'
-                        id='example'
-                        key={this.state.html}
-                        src={this.applySrc()}
-                ></iframe>
+                    className='example__code'
+                    id='example'
+                    key={this.state.html}
+                    src={this.applySrc()}
+                />
                 <button
                     className='example__btn'
                     onClick={this.resetState}>Reset
