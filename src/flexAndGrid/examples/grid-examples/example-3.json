@@ -2,7 +2,7 @@
   "example3": {
     "id": "ex3-grid",
     "title": "Example 3",
-    "desc": "Finally, it is necessary to know place-self attribute. It is a convination of align-self and justify-self. With it you can lay out an element inside its own area. Try to lay out one of them at the top, an other one at the bottom, other item at the right and the last one centered.",
+    "desc": "Finally, it is necessary to know place-self attribute. It is a combination of align-self and justify-self. With it you can lay out an element inside its own area. Try to lay out all the items centered.",
     "html": [
       "<div class='grid-container'>",
       "   <div class='item red'>1</div>",
