@@ -212,6 +212,19 @@ class ExampleRendering extends React.Component {
     return classNames;
   };
 
+  // Capture tabulation press key
+  addTabOnTextArea(e) {
+    if (e.keyCode === 9) {
+        //If tab key is pressed
+        let savePosition = e.target.selectionStart + 2;
+        e.preventDefault();
+        // Indent of two spaces
+        e.target.value = e.target.value.substring(0, e.target.selectionStart) + '  ' + e.target.value.substring(e.target.selectionStart, e.target.value.length);
+        e.target.selectionStart = savePosition;
+        e.target.selectionEnd = savePosition;
+    }
+  };
+
   // Render Component
   render() {
     return (
@@ -226,8 +239,8 @@ class ExampleRendering extends React.Component {
         </div> 
         <p className="article__subtitle article__subtitle--enyo">Enyo Component</p>
         <p className="article__subtitle article__subtitle--css">CSS Classes</p>
-        <textarea className={this.getEnyoClassesNames()} spellCheck="false" key={this.props.example.key + "enyo"} onChange={this.setEnyoState} value={this.state.enyo}/>
-        <textarea className={this.getCSSClassesNames()} spellCheck="false" key={this.props.example.key + "css"} onChange={this.setCSSState} value={this.state.css}/>
+        <textarea className={this.getEnyoClassesNames()} spellCheck="false" key={this.props.example.key + "enyo"} onKeyDown={this.addTabOnTextArea} onChange={this.setEnyoState} value={this.state.enyo}/>
+        <textarea className={this.getCSSClassesNames()} spellCheck="false" key={this.props.example.key + "css"} onKeyDown={this.addTabOnTextArea} onChange={this.setCSSState} value={this.state.css}/>
         <button className="article__btn" key={this.props.example.key + "check"} onClick={this.checkAll}>Check it!</button>            
       </article>
     );
