@@ -3,12 +3,14 @@ import CssNamingHeader from '../components/cssNaming-header';
 import CssNamingContainer from '../components/cssNaming-container';
 import '../styles/cssnamingapp.css';
 
-
 function CssNamingApp() {
   return (
     <div className="cssnamingapp">
-      <CssNamingHeader title='Retail CSS Workshop' subtitle='CSS Naming Workshop'/>
-      <CssNamingContainer/>
+      <CssNamingHeader
+        title="Retail CSS Workshop"
+        subtitle="CSS Naming Workshop"
+      />
+      <CssNamingContainer />
     </div>
   );
 }
