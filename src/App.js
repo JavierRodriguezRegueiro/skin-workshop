@@ -1,24 +1,24 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import MainApp from "./mainApp/js/mainApp";
-import CSSNamingApp from "./cssNaming/js/cssnamingApp";
-import FlexAndGrid from "./flexAndGrid/js/flex-and-grid";
-import SmallWindow from "./mainApp/components/small-window";
-import NotFound from "./mainApp/components/not-found";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import MainApp from './mainApp/js/mainApp';
+import CSSNamingApp from './cssNaming/js/cssnamingApp';
+import FlexAndGrid from './flexAndGrid/js/flex-and-grid';
+import SmallWindow from './mainApp/components/small-window';
+import NotFound from './mainApp/components/not-found';
 
-import "./App.css";
+import './App.css';
 
 const applications = {
   mainApp: {
-    path: "/",
+    path: '/',
     component: MainApp
   },
   flexAndGrid: {
-    path: "/flexAndGridWorkshop",
+    path: '/flexAndGridWorkshop',
     component: FlexAndGrid
   },
   cssNaming: {
-    path: "/cssNamingWorkshop",
+    path: '/cssNamingWorkshop',
     component: CSSNamingApp
   }
 };
@@ -41,7 +41,7 @@ class RouterApp extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this.setWindowWidth);
+    window.addEventListener('resize', this.setWindowWidth);
   }
 
   renderRouter() {
